@@ -1,6 +1,6 @@
-function m= mp_3(a)
-x=[a(0)];
-y=[a(1)];
+a=input('Enter the data in [x;y] form: ')
+x=a(1,:);
+y=a(2,:);
 if length(x)>= 11
   l=10;
 else
@@ -14,4 +14,5 @@ for i =1:l
 end
 [~,I]=min(n);
 coeff=polyfit(x,y,I);
+fprintf('These are the best fit coeffients: \n');
 disp(coeff)
